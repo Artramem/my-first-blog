@@ -2,10 +2,10 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<h1>Новый пост</h1>
+<h1>Новый комментарий</h1>
 <form method="POST">
   {% csrf_token %}
-  {{ form|crispy }}
+  {%crispy form %}  
   <button type="submit" class="btn btn-primary">Сохранить</button>
 </form>
 {% endblock %}
